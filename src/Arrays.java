@@ -48,6 +48,28 @@ public class Arrays {
         return new int[]{mi,ma};
 
     }
+    public static int fakultet(int lengde){
+        int x=1;
+        for(int i=2; i<=lengde; i++){
+            x*=i;
+        }
+        System.out.println("Fakultet av "+lengde+" er "+x);
+        return x;
+    }
+
+    //EN mer effektiv algoritme for maks-metode
+    public int maks2(){
+        int m=0;
+        int maksverdi=arrays[0];
+        for(int i=1; i<arraySize; i++){
+            if(arrays[i]>maksverdi){
+                maksverdi=arrays[i];
+                m=i;
+            }
+        }
+        System.out.println("Største verdi er: "+arrays[m]);
+        return m;
+    }
 
 }
 

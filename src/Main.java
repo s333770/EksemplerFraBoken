@@ -16,6 +16,11 @@ public class Main {
         System.out.println(newArray.maks());
         System.out.println("------------Returner største og minste tall");
         newArray.minMaks();
+        System.out.println();
+        Arrays.fakultet(5);
+        System.out.println();
+        System.out.println("En mer effektiv maks algoritme");
+        newArray.maks2();
 
     }
 
