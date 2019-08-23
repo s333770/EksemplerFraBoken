@@ -21,6 +21,18 @@ public class Main {
         System.out.println();
         System.out.println("En mer effektiv maks algoritme");
         newArray.maks2();
+        System.out.println();
+        System.out.println(newArray.maks3());
+        System.out.println(newArray.maks4());
+        System.out.print("Det største tallet er: ");
+        System.out.println(newArray.maks5());
+        newArray.harmonisk(5);
+        newArray.Euler(637);
+        newArray.beregningAvAntallGanger(10);
+        newArray.maksTest();
+        int[] a = {8,3,5,7,9,6,10,2,1,4}, b = {};
+        System.out.println(newArray.maksOptional(a));
+        System.out.println(newArray.maksOptional(b));
 
     }
 
