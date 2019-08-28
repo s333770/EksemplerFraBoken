@@ -34,6 +34,20 @@ public class Main {
         System.out.println(newArray.maksOptional(a));
         System.out.println(newArray.maksOptional(b));
 
+        //Oppgaver 1.1.7 og videre:
+        int[] A = {8,3,5,7,9,6,10,2,1,4};
+        int[] B= {};
+        Oppgaver117 instans= new Oppgaver117();
+        instans.maksTest(A);
+        //instans.MaksTesting();
+        //instans.maksTest(B);
+
+        //Oppgaver1.1.8Fra boken
+        Forelesning118 instans118= new Forelesning118();
+        instans118.generateRandomArray2();
+        instans118.displayArrayWithIndexes();
+        instans118.randPerm(10);
+        instans118.displayArrayWithIndexes();
     }
 
 }
