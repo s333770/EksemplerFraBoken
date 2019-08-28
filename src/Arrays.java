@@ -1,4 +1,5 @@
 import java.util.OptionalInt;
+import java.util.Random;
 
 public class Arrays {
     private int[] arrays=new int[30];
@@ -237,6 +238,89 @@ public class Arrays {
         return OptionalInt.of(m);                       // en konstruksjonsmetode
     }
     // Oppgaver til kapittell 1.1.7
+    //Random numberGenerator 1.1.8 a)
+    public static int[] randPerm(int n){
+        Random r= new Random();
+        int[] a= new int[n];
+        for(int i=0; i<n; i++){
+            a[i]=r.nextInt(n)+1;
+        }
+        System.out.print(a[0]);
+        for(int i=1; i<a.length-1;i++){
+            System.out.printf("%5s", a[i]);
+        }
+        return a;
+    }
+
+    /*
+    Lager så en metode som eliminerer duplikater i koden vår, denne får jeg ikke til å fungerre
+
+    public static int []randPermUtenRep(int n){
+        Random r=new Random();
+        int[] a= new int[n];
+        for (int i=0; i<n;){
+            int k=r.nextInt()+1;
+            int j=0;
+            for(; j<i; j++){
+                if(a[j]==k){
+                    break;// Hopper ut av løkken
+                }
+                if(i==j){
+                    a[i++]=k;
+                }
+            }
+        }
+        for(int i=0; i<n; i++){
+            System.out.printf("%5s", a[i]);
+        }
+        return a;
+    }
+*/
+public int[] egenGeneringAvRandomArray(int n){
+    Random r=new Random();
+    int[] a= new int[n];
+    for (int i=0; i<n;i++){
+        int k=r.nextInt(n)+1;
+        a[i]=k;
+        if(i>0){
+            for(int j=0; j<i;j++ ){
+                if(a[j]==a[i]){
+                    i--;
+                }
+            }
+        }
+    }
+    for(int i=0; i<n;i++){
+        System.out.printf("%5s", a[i]);
+    }
+    return a;
+
+}
+public int[] booleanInt(int n){ //Default value of boolean is false
+    Random r=new Random();
+    int []a=new int [n];
+    boolean[] har=new boolean[n];
+    for(int i=0; i<n;){
+        int k=r.nextInt(n);
+        if(har[k]==false){
+            har[k]=true;
+            a[i++]=k+1;
+        }
+    }
+
+
+    for(int i=0; i<n;i++){
+        System.out.printf("%5s", a[i]);
+    }
+    return a;
+
+}
+    //Vi avslutter med en effektivisiering av koden overfor
+    public static void bytt(int[] a, int i ,int j){
+    int temp=a[i]; a[i]=a[j]; a[j]=temp;
+    }
+
+
 
 
 }
