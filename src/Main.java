@@ -33,6 +33,15 @@ public class Main {
         int[] a = {8,3,5,7,9,6,10,2,1,4}, b = {};
         System.out.println(newArray.maksOptional(a));
         System.out.println(newArray.maksOptional(b));
+        System.out.println("Genereing av random tall");
+        newArray.randPerm(10);
+        System.out.println();
+        System.out.println("Generering av ulike tall");
+        //newArray.randPermUtenRep(10);
+        newArray.egenGeneringAvRandomArray(10);
+        System.out.println();
+        System.out.println("Boolean Int: ");
+        newArray.booleanInt(10);
 
         //Oppgaver 1.1.7 og videre:
         int[] A = {8,3,5,7,9,6,10,2,1,4};
